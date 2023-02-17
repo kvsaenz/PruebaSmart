@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "2fedecc9-5827-45a8-a218-76bcc120bec2",
+		"name": "PruebaTecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save",
+			"item": [
+				{
+					"name": "/saveClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": 4,\r\n    \"nombre\":\"Uno\",\r\n    \"apellido\":\"Doa\",\r\n    \"direccion\":\"cra\",\r\n    \"fecha_nacimiento\":\"2022-10-20\",\r\n    \"telefono\": 3128888,\r\n    \"email\":\"asd@as.as\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiSave/saveClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiSave",
+								"saveClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/saveProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_producto\": 2,\r\n    \"nombre\": \"papas\",\r\n    \"precio\": 1000,\r\n    \"stock\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiSave/saveProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiSave",
+								"saveProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/saveBill",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"num_factura\": 2,\r\n    \"fecha\": \"2022-01-02\",\r\n    \"id_cliente\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiSave/saveBill",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiSave",
+								"saveBill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/saveDetail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"num_detalle\": 0,\r\n    \"id_factura\": 1,\r\n    \"id_producto\": 1,\r\n    \"cantidad\": 5,\r\n    \"precio\": 300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiSave/saveDetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiSave",
+								"saveDetail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "retrieve",
+			"item": [
+				{
+					"name": "retrieveProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiRetrieve/retrieveProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiRetrieve",
+								"retrieveProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieveProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiRetrieve/retrieveProduct/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiRetrieve",
+								"retrieveProduct",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieveClientByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiRetrieve/retrieveClient/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiRetrieve",
+								"retrieveClient",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieveClients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiRetrieve/retrieveClients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiRetrieve",
+								"retrieveClients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieveBillByIdClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9080/pruebaTecnica/apiRetrieve/retrieveBill/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9080",
+							"path": [
+								"pruebaTecnica",
+								"apiRetrieve",
+								"retrieveBill",
+								"0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/health",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9080/pruebaTecnica/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"pruebaTecnica",
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

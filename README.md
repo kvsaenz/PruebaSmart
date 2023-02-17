@@ -39,3 +39,38 @@ realizado.
 - gradle generateModel --name=Bill
 - gradle generateModel --name=Detail
 - gradle generateDrivenAdapter --type=jpa
+
+
+Utilización:
+
+Se debe compilar el proyecto ejecutando un gradle build y luego iniciar la 
+aplicación desde la clase **MainApplication.java**
+
+Proyecto utiliza base de datos Mysql con el siguiente script
+
+[Modelo de Base de datos ](deployment%2FCREATE%20TABLE%20CLIENTE.sql)
+
+
+[PruebaTecnica.postman_collection.json](deployment%2Fevidencias%2FPruebaTecnica.postman_collection.json)
+
+* Registrar datos del cliente en la tabla CLIENTE.
+  * /apiSave/saveClient
+    * ![saveClient](deployment%2Fevidencias%2FsaveClient.png)
+    * 
+* Registrar datos en la tabla PRODUCTO.
+  * /apiSave/saveProduct
+    * ![SaveProduct](deployment%2Fevidencias%2FSaveProduct.png)
+* Registrar datos en la tabla FACTURA.
+  * /apiSave/saveBill
+    * ![saveBill](deployment%2Fevidencias%2FsaveBill.png)
+* Registrar datos en la tabla DETALLE.
+  * /apiSave/saveDetail
+    * ![saveDetail](deployment%2Fevidencias%2FsaveDetail.png)
+* Consulta de clientes del sistema.
+  * /apiRetrieve/retrieveClients
+    * ![RetrieveClients.png](deployment%2Fevidencias%2FRetrieveClients.png)
+* Consulta de productos del sistema.
+  * /apiRetrieve/retrieveProducts
+    * ![RetrieveProducts](deployment%2Fevidencias%2FRetrieveProducts.png)
+  * /apiRetrieve/retrieveProduct/{id_producto}
+    * ![RetrieveProductsID](deployment%2Fevidencias%2FRetrieveProductsID.png)
